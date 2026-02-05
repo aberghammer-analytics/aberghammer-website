@@ -1,0 +1,66 @@
+---
+import Base from "../layouts/Base.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ExperienceItem from "../components/ExperienceItem.astro";
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="py-16 md:py-20">
+    <h1 class="text-4xl font-bold tracking-tight">Anthony Berghammer</h1>
+    <p class="mt-2 text-lg text-muted">AI Engineer</p>
+    <p class="mt-6 text-base leading-relaxed max-w-prose">
+      AI Engineer with 5+ years building production ML systems, LLM agents, and
+      scalable data infrastructure. Experience architecting multi-agent systems,
+      RAG pipelines, and developer platforms that accelerate team delivery.
+      Track record across federal, healthcare, and financial services.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section class="py-12 md:py-16">
+    <h2 class="text-lg font-semibold">Projects</h2>
+    <div class="mt-4">
+      <ProjectCard
+        title="NBAStatPy"
+        href="https://github.com/aberghammer-analytics/nbastatpy"
+        description="Python package for NBA data acquisition. Typed, tested, published on PyPI with CI/CD."
+        tech={["Python", "PyPI", "GitHub Actions"]}
+      />
+      <ProjectCard
+        title="md-viewer"
+        href="https://github.com/aberghammer-analytics/md-viewer"
+        description="Fast CLI markdown viewer/editor built with Tauri. Native app with CRT aesthetic and edit mode."
+        tech={["Rust", "Tauri", "JavaScript", "Homebrew"]}
+      />
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="py-12 md:py-16">
+    <h2 class="text-lg font-semibold">Work Experience</h2>
+    <div class="mt-4">
+      <ExperienceItem
+        title="Research Data Scientist"
+        company="RTI International"
+        dates="Feb 2022 – Present"
+        summary="Leading technical AI strategy. Building multi-agent systems, MCP tooling, and cloud infrastructure for rapid AI deployment across 30+ prototypes."
+      />
+      <ExperienceItem
+        title="Senior Decision Scientist"
+        company="USAA"
+        dates="Dec 2020 – Feb 2022"
+        summary="Built NLP compliance detection systems increasing error detection 6x while reducing false positives 40%."
+      />
+      <ExperienceItem
+        title="Data Scientist"
+        company="EY"
+        dates="Jun 2019 – Dec 2020"
+        summary="ML solutions for manufacturing, public sector, and public health clients including demand forecasting and outbreak detection."
+      />
+    </div>
+    <a href="/resume" class="inline-block mt-6 text-sm text-accent hover:text-accent-hover transition-colors">
+      View full resume →
+    </a>
+  </section>
+</Base>

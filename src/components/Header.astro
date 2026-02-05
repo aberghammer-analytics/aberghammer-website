@@ -1,0 +1,31 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="pt-12 pb-8 md:pt-16 md:pb-12">
+  <nav class="flex items-baseline justify-between">
+    <a href="/" class="text-lg font-semibold text-text no-underline hover:text-accent">
+      Anthony Berghammer
+    </a>
+    <div class="flex gap-6 text-sm">
+      <a
+        href="/"
+        class:list={[
+          "no-underline hover:text-accent transition-colors",
+          currentPath === "/" ? "text-text font-medium" : "text-muted",
+        ]}
+      >
+        Home
+      </a>
+      <a
+        href="/resume"
+        class:list={[
+          "no-underline hover:text-accent transition-colors",
+          currentPath === "/resume" ? "text-text font-medium" : "text-muted",
+        ]}
+      >
+        Resume
+      </a>
+    </div>
+  </nav>
+</header>

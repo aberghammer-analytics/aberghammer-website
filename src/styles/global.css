@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2")
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-text: #1a1a1a;
+  --color-bg: #fafafa;
+  --color-accent: #64748b;
+  --color-accent-hover: #475569;
+  --color-divider: #e5e7eb;
+  --color-muted: #6b7280;
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  /* Full page width */
+  .mx-auto {
+    max-width: 100%;
+  }
+
+  /* Hide nav and footer */
+  header,
+  footer {
+    display: none !important;
+  }
+
+  /* Tighter section spacing */
+  section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Remove accent colors — all text black */
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Show link URLs inline */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  /* Don't show URL for email links */
+  a[href^="mailto"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  /* Muted text stays readable but lighter */
+  .text-muted {
+    color: #333;
+  }
+
+  /* Ensure list markers are visible */
+  .marker\:text-gray-300 li::marker {
+    color: #333;
+  }
+
+  /* Avoid page breaks inside entries */
+  article {
+    break-inside: avoid;
+  }
+}

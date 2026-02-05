@@ -1,0 +1,114 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Resume — Anthony Berghammer">
+  <section class="py-8">
+    <h1 class="text-2xl font-bold tracking-tight">Anthony Berghammer</h1>
+    <p class="mt-1 text-sm text-muted">
+      berghammer.anthony.j@gmail.com ·
+      <a href="https://github.com/aberghammer-analytics" class="hover:text-accent transition-colors">GitHub</a> ·
+      <a href="https://linkedin.com/in/anthony-berghammer" class="hover:text-accent transition-colors">LinkedIn</a>
+    </p>
+  </section>
+
+  <!-- Experience -->
+  <section class="py-8">
+    <h2 class="text-lg font-semibold border-b border-divider pb-2">Experience</h2>
+
+    <article class="mt-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <span>
+          <span class="font-medium">Research Data Scientist</span>
+          <span class="text-muted"> · RTI International</span>
+        </span>
+        <span class="text-sm text-muted">Feb 2022 – Present</span>
+      </div>
+      <ul class="mt-2 space-y-1.5 text-sm text-muted leading-relaxed list-disc ml-4 marker:text-gray-300">
+        <li>Led company-wide AI strategy for SAS-to-Python conversion across 50+ projects; developed cost methodology reducing estimated conversion costs from $6M to $2M (66% savings)</li>
+        <li>Pioneered company's first MCP implementations using pydantic_ai and fastmcp; built agentic web scraper with multi-agent orchestration to extract contact data from 10K+ structurally diverse websites</li>
+        <li>Led team of 4 developers on large-scale SAS-to-Python migration for federal healthcare client; converted 600+ scripts to dbt/Snowpark on Snowflake, accelerating delivery timeline 3x</li>
+        <li>Architected cloud infrastructure (Terraform, Docker, ECR, ECS, Bedrock) and CI/CD templates enabling rapid AI application deployment; supports 30+ prototypes in production</li>
+        <li>Designed LLM evaluation framework using LLM-as-a-judge with ELO-style tournaments; benchmarked OpenAI, Bedrock, and open-source models against weighted metrics</li>
+        <li>Developed LLM agents for automated code translation; deployed complementary RAG system supporting hundreds of statisticians</li>
+        <li>Engineered semantic search system with 90%+ accuracy using HuggingFace and LanceDB, reducing NIH grant misclassification by 25% on $1B+ portfolio</li>
+        <li>Built text classification models (PyTorch, HuggingFace) for Bureau of Justice Statistics to classify pretrial events, enabling national compliance reporting</li>
+      </ul>
+    </article>
+
+    <article class="mt-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <span>
+          <span class="font-medium">Senior Decision Scientist</span>
+          <span class="text-muted"> · USAA</span>
+        </span>
+        <span class="text-sm text-muted">Dec 2020 – Feb 2022</span>
+      </div>
+      <ul class="mt-2 space-y-1.5 text-sm text-muted leading-relaxed list-disc ml-4 marker:text-gray-300">
+        <li>Architected NLP compliance detection system increasing error detection 6x while reducing false positives 40%, processing thousands of customer interactions daily</li>
+        <li>Built transformer-based similarity model (HuggingFace) for sales practice error detection, reducing manual review 70% while maintaining 95% precision</li>
+      </ul>
+    </article>
+
+    <article class="mt-6">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <span>
+          <span class="font-medium">Data Scientist</span>
+          <span class="text-muted"> · EY</span>
+        </span>
+        <span class="text-sm text-muted">Jun 2019 – Dec 2020</span>
+      </div>
+      <ul class="mt-2 space-y-1.5 text-sm text-muted leading-relaxed list-disc ml-4 marker:text-gray-300">
+        <li>Built demand forecasting solution (R, Azure ML) for manufacturing clients, achieving 15% MAPE improvement over baseline</li>
+        <li>Developed COVID-19 outbreak detection system (Python, Airflow) processing thousands of news stories daily for public health decisions</li>
+      </ul>
+    </article>
+  </section>
+
+  <!-- Education -->
+  <section class="py-8">
+    <h2 class="text-lg font-semibold border-b border-divider pb-2">Education</h2>
+    <div class="mt-6 space-y-3">
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <span>
+          <span class="font-medium">M.S. Analytics</span>
+          <span class="text-muted"> · NC State University (Institute for Advanced Analytics)</span>
+        </span>
+        <span class="text-sm text-muted">May 2019</span>
+      </div>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <span>
+          <span class="font-medium">MBA, Business Analytics</span>
+          <span class="text-muted"> · Appalachian State University</span>
+        </span>
+        <span class="text-sm text-muted">Aug 2017</span>
+      </div>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4">
+        <span>
+          <span class="font-medium">B.S. Marketing</span>
+          <span class="text-muted"> · Appalachian State University</span>
+        </span>
+        <span class="text-sm text-muted">May 2012</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-8">
+    <h2 class="text-lg font-semibold border-b border-divider pb-2">Skills</h2>
+    <div class="mt-6 space-y-3 text-sm leading-relaxed">
+      <p>
+        <span class="font-medium">AI/ML:</span>
+        <span class="text-muted"> LLM Agents, Multi-Agent Systems, RAG, MCP (pydantic_ai, fastmcp), LangChain, HuggingFace, PyTorch, OpenAI, Bedrock, Ollama</span>
+      </p>
+      <p>
+        <span class="font-medium">Infrastructure:</span>
+        <span class="text-muted"> AWS (ECS, ECR, Bedrock), Azure, Terraform, Docker, CI/CD, GitHub Actions, Airflow</span>
+      </p>
+      <p>
+        <span class="font-medium">Data:</span>
+        <span class="text-muted"> Python, SQL, R, Snowflake, dbt, Snowpark, PostgreSQL, DuckDB, LanceDB</span>
+      </p>
+    </div>
+  </section>
+</Base>
