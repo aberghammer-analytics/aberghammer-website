@@ -1,0 +1,26 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="pt-9 pb-6 md:pt-12 md:pb-9">
+  <nav class="flex justify-end gap-6 text-base">
+    <a
+      href="/"
+      class:list={[
+        "no-underline hover:text-accent transition-colors",
+        currentPath === "/" ? "text-muted font-medium" : "text-muted",
+      ]}
+    >
+      Home
+    </a>
+    <a
+      href="/resume"
+      class:list={[
+        "no-underline hover:text-accent transition-colors",
+        currentPath === "/resume" ? "text-muted font-medium" : "text-muted",
+      ]}
+    >
+      Resume
+    </a>
+  </nav>
+</header>

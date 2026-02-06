@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Georgia", "Times New Roman", serif;
+  --color-text: #111111;
+  --color-bg: #fffff8;
+  --color-accent: #8b0000;
+  --color-accent-hover: #6b0000;
+  --color-divider: #ddd8c8;
+  --color-muted: #555555;
+}
+
+body {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  /* Full page width */
+  .mx-auto {
+    max-width: 100%;
+  }
+
+  /* Hide nav and footer */
+  header,
+  footer {
+    display: none !important;
+  }
+
+  /* Tighter section spacing */
+  section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Remove accent colors — all text black */
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  /* Show link URLs inline */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  /* Don't show URL for email links */
+  a[href^="mailto"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+
+  /* Muted text stays readable but lighter */
+  .text-muted {
+    color: #333;
+  }
+
+  /* Ensure list markers are visible */
+  .marker\:text-gray-300 li::marker {
+    color: #333;
+  }
+
+  /* Avoid page breaks inside entries */
+  article {
+    break-inside: avoid;
+  }
+}

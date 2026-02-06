@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  href?: string;
+  description: string;
+  tech: string[];
+}
+
+const { title, href, description, tech } = Astro.props;
+---
+
+<article class="border-l-3 border-accent pl-5 py-4">
+  {href ? (
+    <a href={href} target="_blank" rel="noopener noreferrer" class="font-medium text-text hover:text-accent transition-colors">
+      {title}
+    </a>
+  ) : (
+    <span class="font-medium text-text">{title}</span>
+  )}
+  <p class="mt-1 text-muted text-[17px] leading-relaxed">{description}</p>
+  <p class="mt-2 text-sm text-muted">{tech.join(" · ")}</p>
+</article>

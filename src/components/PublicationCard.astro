@@ -1,0 +1,16 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  publisher: string;
+}
+
+const { title, href, publisher } = Astro.props;
+---
+
+<article class="border-l-3 border-accent pl-5 py-4">
+  <a href={href} target="_blank" rel="noopener noreferrer" class="font-medium text-text hover:text-accent transition-colors">
+    {title}
+  </a>
+  <p class="mt-1 text-sm text-muted">{publisher}</p>
+</article>
