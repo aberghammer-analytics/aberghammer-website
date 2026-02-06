@@ -1,6 +1,6 @@
 # Anthony Berghammer
 
-Building AI systems. Interested in agent orchestration, evaluation without ground truth, and closing the gap between demo and production.
+Building AI systems. Interested in agent orchestration, RAG, and evaluation.
 
 ## Current Focus:
 
@@ -8,6 +8,6 @@ Building AI systems. Interested in agent orchestration, evaluation without groun
 - **NBAStatPy:** NBA data wrapper and MCP server on PyPI
 - **md-viewer:** CLI markdown viewer/editor built with Tauri
 
-**Background:** MS Analytics (NC State) / MBA (Appalachian State). Previously ML at USAA and EY, then AI infrastructure for federal research and healthcare projects.
+**Background:** MS Analytics (NC State) / MBA (Appalachian State). Previously ML at USAA and EY, currently AI/ML for federal research and healthcare projects.
 
 **Tech:** Python • PyTorch • HuggingFace • AWS • Docker • Terraform • Snowflake • MCP
