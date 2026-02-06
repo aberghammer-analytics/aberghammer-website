@@ -1,25 +1,18 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2")
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-    U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
-    U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+@theme {
+  --font-sans: "Georgia", "Times New Roman", serif;
+  --color-text: #111111;
+  --color-bg: #fffff8;
+  --color-accent: #8b0000;
+  --color-accent-hover: #6b0000;
+  --color-divider: #ddd8c8;
+  --color-muted: #555555;
 }
 
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --color-text: #1a1a1a;
-  --color-bg: #fafafa;
-  --color-accent: #64748b;
-  --color-accent-hover: #475569;
-  --color-divider: #e5e7eb;
-  --color-muted: #6b7280;
+body {
+  font-size: 20px;
+  line-height: 1.7;
 }
 
 @media print {

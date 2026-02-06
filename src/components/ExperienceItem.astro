@@ -3,19 +3,30 @@ interface Props {
   title: string;
   company: string;
   dates: string;
-  summary: string;
+  logo?: string;
+  href?: string;
 }
 
-const { title, company, dates, summary } = Astro.props;
+const { title, company, dates, logo, href } = Astro.props;
 ---
 
 <article class="py-3">
-  <div class="flex flex-wrap items-baseline justify-between gap-x-4">
-    <span>
-      <span class="font-medium">{title}</span>
-      <span class="text-muted"> · {company}</span>
-    </span>
-    <span class="text-sm text-muted">{dates}</span>
+  <div class="flex items-center gap-3">
+    {logo && (
+      <a href={href} target="_blank" rel="noopener noreferrer" class="shrink-0">
+        <div class="w-16 h-10 border border-divider rounded flex items-center justify-center p-1.5">
+          <img src={logo} alt={`${company} logo`} class="max-w-full max-h-full object-contain" />
+        </div>
+      </a>
+    )}
+    <div class="flex-1">
+      <div class="flex items-baseline justify-between gap-4">
+        <div>
+          <span class="font-medium">{title}</span>
+          <span class="text-muted"> · {company}</span>
+        </div>
+        <span class="text-sm text-muted shrink-0">{dates}</span>
+      </div>
+    </div>
   </div>
-  <p class="mt-1 text-muted text-sm leading-relaxed">{summary}</p>
 </article>

@@ -20,19 +20,16 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <link
-      rel="preload"
-      href="https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hiA.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
   </head>
   <body class="bg-bg text-text font-sans antialiased">
-    <div class="mx-auto max-w-2xl px-6">
-      <Header />
+    <slot name="hero">
+      <div class="mx-auto max-w-[800px] px-9">
+        <Header />
+      </div>
+    </slot>
+    <div class="mx-auto max-w-[800px] px-9">
       <main>
         <slot />
       </main>
